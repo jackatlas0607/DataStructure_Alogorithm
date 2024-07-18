@@ -21,7 +21,7 @@ int Hashtable::hash1(int key)
 int Hashtable::hash2(int key)
 {
     double A = (sqrt(5) - 1) / 2;
-    return floor(this->size * ((int)(key * A) % 1));
+    return floor(this->size * ((key * (int)A) % 1));
 }
 
 void Hashtable::set(int key, std::string value)
